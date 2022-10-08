@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.appContainer {
+  min-height: 100vh;
+}
+
+.mainContainer {
+  height: 100%;
+}
+
+.error {
+  color: red;
+}

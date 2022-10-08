@@ -4,14 +4,16 @@ import './index.css';
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Home from "./App"
-import About from "./pages/about"
+import About from "./pages/About"
+import Order from "./pages/Order"
 
 ReactDOM.render(
     <Router>
-        <div>
-            <main>
+        <div className='appContainer'>
+            <main className='mainContainer'>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
+                <Route path="/order" component={Order} />
             </main>
         </div>
     </Router>, 

@@ -1,0 +1,32 @@
+.orderContainer {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.orderContainer form {
+  flex-direction: column;
+  display: flex;
+  min-width: 700px;
+}
+
+
+.orderContainer form label {
+  margin: 15px 0;
+}
+
+.orderContainer form fieldset {
+  flex-direction: column;
+  display: flex;
+}
+
+.orderContainer form label input,
+.orderContainer form label select {
+  margin-left: 15px;
+}
+
+.orderContainer form button {
+  margin-top: 25px;
+}

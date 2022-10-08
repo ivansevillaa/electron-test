@@ -21,6 +21,7 @@ function App() {
           Learn React
         </a>
         <Link className="App-link" to="/about">Link to the About Page</Link>
+        <Link className="App-link" to="/order">Link to the Order Page</Link>
       </header>
       
     </div>

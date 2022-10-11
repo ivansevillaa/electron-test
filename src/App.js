@@ -22,6 +22,7 @@ function App() {
         </a>
         <Link className="App-link" to="/about">Link to the About Page</Link>
         <Link className="App-link" to="/order">Link to the Order Page</Link>
+        <Link className="App-link" to="/invoice">Link to the Generate Invoice Page</Link>
       </header>
       
     </div>

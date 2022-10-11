@@ -8,7 +8,8 @@
     "productName": "react-electron",
     "mac": {
       "icon": "build/logo512.png",
-      "target": "tar.gz"
+      "target": "tar.gz",
+      "identity": null
     },
     "linux": {
       "category": "Utils",

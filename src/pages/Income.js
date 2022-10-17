@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import AppLayout from "../components/Layout";
-import "./invoice.css";
+import "./income.css";
 
-const Invoice = () => {
+const Income = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
@@ -13,7 +13,7 @@ const Invoice = () => {
   return (
     <AppLayout>
       <div className="invoiceContainer">
-        <h1>Generar facturar</h1>
+        <h1>Registrar pago</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor='idPedido'>
             Ingrese ID del pedido que quiere generar la factura
@@ -33,4 +33,4 @@ const Invoice = () => {
   )
 }
 
-export default Invoice
+export default Income

@@ -1,4 +1,4 @@
-.invoiceContainer {
+.orderContainer {
   display: flex;
   min-height: 100vh;
   align-items: center;
@@ -6,27 +6,27 @@
   flex-direction: column;
 }
 
-.invoiceContainer form {
+.orderContainer form {
   flex-direction: column;
   display: flex;
-  min-width: 500px;
+  min-width: 700px;
 }
 
 
-.invoiceContainer form label {
+.orderContainer form label {
   margin: 15px 0;
 }
 
-.invoiceContainer form fieldset {
+.orderContainer form fieldset {
   flex-direction: column;
   display: flex;
 }
 
-.invoiceContainer form label input,
-.invoiceContainer form label select {
+.orderContainer form label input,
+.orderContainer form label select {
   margin-left: 15px;
 }
 
-.invoiceContainer form button {
+.orderContainer form button {
   margin-top: 25px;
 }

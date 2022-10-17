@@ -32,6 +32,7 @@
   "homepage": "./",
   "private": true,
   "dependencies": {
+    "antd": "^4.23.5",
     "cross-env": "^6.0.3",
     "electron-is-dev": "^1.1.0",
     "react": "^16.11.0",

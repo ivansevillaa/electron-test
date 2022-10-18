@@ -35,11 +35,13 @@
     "antd": "^4.23.5",
     "cross-env": "^6.0.3",
     "electron-is-dev": "^1.1.0",
+    "qrcode.react": "^3.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-hook-form": "^7.37.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-to-print": "^2.14.7"
   },
   "scripts": {
     "start-react": "react-scripts start",

@@ -1,32 +1,37 @@
-.orderContainer {
+.loginContainer {
   display: flex;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 86px;
   flex-direction: column;
 }
 
-.orderContainer form {
+.loginContainer form {
   flex-direction: column;
   display: flex;
-  min-width: 700px;
+  min-width: 500px;
 }
 
 
-.orderContainer form label {
+.loginContainer form label {
   margin: 15px 0;
 }
 
-.orderContainer form fieldset {
+.loginContainer form input {
+  margin-left: 15px;
+}
+
+.loginContainer form fieldset {
   flex-direction: column;
   display: flex;
 }
 
-.orderContainer form label input,
-.orderContainer form label select {
-  margin-left: 15px;
+.loginContainer form button {
+  margin-top: 25px;
 }
 
-.orderContainer form button {
-  margin-top: 25px;
+.imageWrapper {
+  background-image: url('https://sentidos.vercel.app/images/imagen4.jpg');
+  background-size: cover;
 }

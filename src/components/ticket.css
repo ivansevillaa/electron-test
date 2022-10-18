@@ -1,8 +1,15 @@
+.invoiceContainer {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 #invoice-POS {
   box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-  padding:2mm;
   margin: 0 auto;
-  width: 44mm;
+  width: 700px;
   background: #FFF;
 }
   
@@ -23,7 +30,7 @@
 }
 
 #invoice-POS h2 {
-  font-size: .9em;
+  font-size: 16px;
 }
 
 #invoice-POS h3 {
@@ -33,7 +40,7 @@
 }
 
 #invoice-POS p {
-  font-size: .7em;
+  font-size: 12px;
   color: #666;
   line-height: 1.2em;
 }
@@ -55,10 +62,10 @@
 }
 
 #invoice-POS #top .logo{
-  height: 60px;
-  width: 60px;
-  background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
-  background-size: 60px 60px;
+  height: 240px;
+  width: 240px;
+  background: url(https://sentidos.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75) no-repeat;
+  background-size: 240px 240px;
 }
 
 #invoice-POS .clientlogo {
@@ -75,6 +82,11 @@
   margin-left: 0;
 }
 
+.info-cliente {
+  text-align: right;
+  margin-right: 16px;
+}
+
 #invoice-POS .title {
   float: right;
 }
@@ -89,12 +101,13 @@
 }
 
 #invoice-POS .tabletitle {
-  font-size: .5em;
-background: #EEE;
+  font-size: 12px;
+  background: #EEE;
 }
 
 #invoice-POS .service {
   border-bottom: 1px solid #EEE;
+  font-size: 24px;
 }
 
 #invoice-POS .item {

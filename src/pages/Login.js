@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './login.css';
 import { useForm } from 'react-hook-form'
-import { Typography, Button } from 'antd';
+import { Typography, Button, Row, Col } from 'antd';
 import { UserContext } from '../context/UserContext';
 import { useHistory } from 'react-router-dom'
 const { Title } = Typography;
@@ -15,7 +15,6 @@ function Login() {
 
   useEffect(() => {
     if (userContext) {
-      console.log(Boolean(userContext.user));
       if (userContext.user) {
         history.push('/');
       }
@@ -56,37 +55,41 @@ function Login() {
   };
 
   return (
-    <div className='orderContainer'>
-      <Title>Iniciar sesión</Title>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor='email_empleado'>
-          Email
-          <input
-            id="email_empleado"
-            placeholder='empleado@gmail.com'
-            type="email"
-            {...register("email_empleado", { 
-              required: 'El email del empleado es obligatorio para poder iniciar sesión'
-            })}
-          />
-        </label>
-        {errors.email_empleado && <span className='error'>{errors.email_empleado.message}</span>}
-        <label htmlFor='password_empleado'>
-          Contraseña
-          <input
-            id="password_empleado"
-            placeholder='*******'
-            type="password"
-            {...register("password_empleado", { 
-              required: 'La contraseña es obligatoria para poder iniciar sesión'
-            })}
-          />
-        </label>
-        {errors.password_empleado && <span className='error'>{errors.password_empleado.message}</span>}
-        <Button type="primary" htmlType='submit' loading={loading}>Iniciar sesión</Button>
-        {error && <span className='error'>{error}</span>}
-      </form>
-    </div>
+    <Row>
+      <Col span={12} className='imageWrapper' />
+      <Col span={12} className='loginContainer'>
+        <img src="https://sentidos.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75" />
+        <Title>Iniciar sesión</Title>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor='email_empleado'>
+            Email
+            <input
+              id="email_empleado"
+              placeholder='empleado@gmail.com'
+              type="email"
+              {...register("email_empleado", { 
+                required: 'El email del empleado es obligatorio para poder iniciar sesión'
+              })}
+            />
+          </label>
+          {errors.email_empleado && <span className='error'>{errors.email_empleado.message}</span>}
+          <label htmlFor='password_empleado'>
+            Contraseña
+            <input
+              id="password_empleado"
+              placeholder='*******'
+              type="password"
+              {...register("password_empleado", { 
+                required: 'La contraseña es obligatoria para poder iniciar sesión'
+              })}
+            />
+          </label>
+          {errors.password_empleado && <span className='error'>{errors.password_empleado.message}</span>}
+          <Button type="primary" htmlType='submit' loading={loading}>Iniciar sesión</Button>
+          {error && <span className='error'>{error}</span>}
+        </form>
+      </Col>
+    </Row>
   )
 }
 

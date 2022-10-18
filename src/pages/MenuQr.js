@@ -1,33 +1,21 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import AppLayout from "../components/Layout";
 import "./menuQr.css";
+import {QRCodeSVG} from 'qrcode.react';
+import { Typography } from 'antd';
+const { Title } = Typography;
+
 
 const MenuQr = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const onSubmit = (data) => {
-    console.log('MANDO A BACKEND: ', data);
-  };
-
   return (
     <AppLayout>
       <div className="invoiceContainer">
-        <h1>Registrar pago</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor='idPedido'>
-            Ingrese ID del pedido que quiere generar la factura
-            <input
-              id="idPedido"
-              placeholder='7347843'
-              {...register("idPedido", { 
-                required: 'El ID del pedido es obligatorio para poder generar la factura'
-              })}
-            />
-          </label>
-          {errors.idPedido && <span className='error'>{errors.idPedido.message}</span>}
-          <button>Generar factura</button>
-        </form>
+        <Title>Escaneá el QR para conocer el menú</Title>
+        <QRCodeSVG 
+          value="https://postimg.cc/hXRpS3fs"
+          width={320}
+          height={320}
+        />
       </div>
     </AppLayout>
   )

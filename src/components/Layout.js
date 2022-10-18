@@ -12,10 +12,10 @@ import {
   PlusOutlined
 } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
-import { Route, useHistory, useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { UserContext } from '../context/UserContext';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 const items = (history, userContext) => [
   {
@@ -67,13 +67,13 @@ const items = (history, userContext) => [
     onClick: () => history.push('/menu'),
     disabled: !(userContext && userContext.user && userContext.user.rol === 1)
   },
-  {
-    key: 8,
-    icon: <FundOutlined />,
-    label: 'Informe de ingresos',
-    onClick: () => history.push('/income'),
-    disabled: !(userContext && userContext.user && userContext.user.rol === 1)
-  },
+  // {
+  //   key: 8,
+  //   icon: <FundOutlined />,
+  //   label: 'Informe de ingresos',
+  //   onClick: () => history.push('/income'),
+  //   disabled: !(userContext && userContext.user && userContext.user.rol === 1)
+  // },
   {
     key: 9,
     icon: <ImportOutlined />,
@@ -98,11 +98,12 @@ function AppLayout ({ children }) {
           position: 'fixed',
           left: 0,
           top: 0,
-          bottom: 0,
+          bottom: 0
+          // style={{ background: '#ffc9ae' }}
         }}
       >
         <div className="logo" />
-        <Menu theme="dark" mode="inline" items={items(history, userContext)} />
+        <Menu theme="dark" mode="inline"  items={items(history, userContext)} />
       </Sider>
       <Layout
         className="site-layout"
@@ -110,12 +111,6 @@ function AppLayout ({ children }) {
           marginLeft: 200,
         }}
       >
-        <Header
-          className="site-layout-background"
-          style={{
-            padding: 0,
-          }}
-        />
         <Content
           style={{
             margin: '24px 16px 0',

@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import './index.css';
 import { Route, useHistory } from 'react-router-dom'
-import About from "./pages/About"
 import Order from "./pages/Order"
 import Invoice from "./pages/Invoice"
 import Pay from "./pages/Pay"
@@ -33,7 +32,6 @@ const App = () => {
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <Route exact path="/" component={Order} />
-      <Route exact path="/about" component={About} />
       <Route exact path="/invoice" component={Invoice} />
       <Route exact path="/pay" component={Pay} />
       <Route exact path="/login" component={Login} />

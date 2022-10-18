@@ -1,32 +1,9 @@
-.invoiceContainer {
-  display: flex;
+.clientContainer {
   min-height: 100vh;
+}
+
+.tableTitle {
   align-items: center;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
-}
-
-.invoiceContainer form {
-  flex-direction: column;
-  display: flex;
-  min-width: 500px;
-}
-
-
-.invoiceContainer form label {
-  margin: 15px 0;
-}
-
-.invoiceContainer form fieldset {
-  flex-direction: column;
-  display: flex;
-}
-
-.invoiceContainer form label input,
-.invoiceContainer form label select {
-  margin-left: 15px;
-}
-
-.invoiceContainer form button {
-  margin-top: 25px;
 }

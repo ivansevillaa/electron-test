@@ -7,6 +7,8 @@ import Pay from "./pages/Pay"
 import Clients from "./pages/Clients"
 import TablesBooked from "./pages/TablesBooked"
 import GenerateMenu from "./pages/GenerateMenu"
+import GenerateDailyMenu from "./pages/GenerateDailyMenu"
+import DeliveryState from "./pages/DeliveryState"
 import MenuQr from "./pages/MenuQr"
 import IncomeReport from "./pages/Income"
 import Login from "./pages/Login"
@@ -38,6 +40,8 @@ const App = () => {
       <Route exact path="/clients" component={Clients} />
       <Route exact path="/tables" component={TablesBooked} />
       <Route exact path="/menu" component={GenerateMenu} />
+      <Route exact path="/menu-del-dia" component={GenerateDailyMenu} />
+      <Route exact path="/delivery" component={DeliveryState} />
       <Route exact path="/menu-qr" component={MenuQr} />
       <Route exact path="/income" component={IncomeReport} />
     </UserContext.Provider>

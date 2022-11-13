@@ -3,7 +3,6 @@ import "../App.css"
 import "./ticket.css"
 // 36227167-2023-45d7-ae9e-ff6810965062
 const Ticket = ({ orderData, clientData }) => {
-  console.log('orderData', orderData);
   const calculateTotal = () => {
     return orderData && orderData.reduce((previousValue, currentValue) => {
       return previousValue + currentValue.menu.precio * currentValue.cantidad

@@ -145,8 +145,6 @@ function Order() {
                   <React.Fragment key={item.categoriaId}>
                     <Title underline level="h3" style={{ fontSize: '24px' }}>{item.tipo_categoria}</Title>
                     {plates && plates.map((plate, index) => {
-                      console.log(plate)
-                      console.log(item)
                       if (plate.idcategoria === item.categoriaId) {
                         return <React.Fragment key={plate.id_menu}>
                           <label>

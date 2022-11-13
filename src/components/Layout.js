@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './layout.css';
 import {
   EditOutlined,
-  FundOutlined,
+  RetweetOutlined,
   ProfileOutlined,
   ImportOutlined,
   DollarOutlined,
@@ -67,6 +67,20 @@ const items = (history, userContext) => [
     onClick: () => history.push('/menu'),
     disabled: !(userContext && userContext.user && userContext.user.rol === 1)
   },
+  {
+    key: 8,
+    icon: <PlusOutlined />,
+    label: 'Cargar platos del día',
+    onClick: () => history.push('/menu-del-dia'),
+    disabled: !(userContext && userContext.user && userContext.user.rol === 1)
+  },
+  {
+    key: 9,
+    icon: <RetweetOutlined />,
+    label: 'Estado delivery',
+    onClick: () => history.push('/delivery'),
+    disabled: !(userContext && userContext.user && userContext.user.rol === 1)
+  },
   // {
   //   key: 8,
   //   icon: <FundOutlined />,
@@ -75,7 +89,7 @@ const items = (history, userContext) => [
   //   disabled: !(userContext && userContext.user && userContext.user.rol === 1)
   // },
   {
-    key: 9,
+    key: 10,
     icon: <ImportOutlined />,
     label: 'Cerrar sesión',
     onClick: () => {

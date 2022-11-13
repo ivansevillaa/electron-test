@@ -28,8 +28,6 @@ const Invoice = () => {
         setSuccess(true);
         const data = await response.json();
         const clientData = await responseClient.json();
-        console.log(data);
-        console.log(clientData);
         setOrderData(data);
         setClientData(clientData);
       }

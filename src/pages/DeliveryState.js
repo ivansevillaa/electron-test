@@ -14,7 +14,7 @@ const GenerateMenu = () => {
   const [success, setSuccess] = useState();
 
   const getOrders = () => {
-    fetch('https://sentidosapi1.azurewebsites.net/ver_listado_pedidos_mobile/cf6a1e15-f607-4423-ba4a-e8d41e085a53')
+    fetch('https://sentidosapi1.azurewebsites.net/cargar_pedidos')
       .then(res => res.json())
       .then(data => setData(data));
   }
